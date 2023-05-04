@@ -1,8 +1,8 @@
 export OMP_NUM_THREADS=1
 export CUDA_VISIBLE_DEVICES=${1:-0}
 
-PRED_DIR=''
-GT_DIR=''
+PRED_DIR='/home/tedlasai/iColoriT/checkpoints'
+GT_DIR='/home/tedlasai/data/imagenet/val'
 NUM_HINT=${2:-10}
 
 # other options

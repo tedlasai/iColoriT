@@ -63,6 +63,7 @@ def get_args():
     parser.add_argument('--device', default='cuda', help='device to use for training / testing')
 
     # Hint generator parameter
+    #CHANGE THIS HINT SIZE to 1
     parser.add_argument('--hint_size', default=2, type=int, help='size of the hint region is given by (h, h)')
     parser.add_argument('--avg_hint', action='store_true', help='avg hint')
     parser.add_argument('--no_avg_hint', action='store_false', dest='avg_hint')
@@ -135,6 +136,7 @@ def main(args):
     total_shown = 0
 
     args.hint_dirs = [osp.join(args.val_hint_dir, f'h{args.hint_size}-n{i}') for i in args.val_hint_list]
+    print(args.hint_dirs)
     dataset_val = build_fixed_validation_dataset(args)
     data_loader_val = DataLoader(
         dataset_val,

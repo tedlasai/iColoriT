@@ -2,11 +2,11 @@ export OMP_NUM_THREADS=1
 export CUDA_VISIBLE_DEVICES=${1:-0}
 
 # path to model and validation dataset
-MODEL_PATH=''
-VAL_DATA_PATH=''
-VAL_HINT_DIR=''
+MODEL_PATH='/home/tedlasai/iColoriT/icolorit_base_4ch_patch16_224.pth'
+VAL_DATA_PATH='/home/tedlasai/iColoriT/imagenet_val_begin'
+VAL_HINT_DIR='/home/tedlasai/iColoriT/h2'
 # Set the path to save checkpoints
-PRED_DIR=''
+PRED_DIR='/home/tedlasai/iColoriT/checkpoints'
 
 # other options
 opt=${2:-}
